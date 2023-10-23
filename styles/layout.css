@@ -1,0 +1,113 @@
+html,body {
+  height: 100%;
+}
+
+body {
+  margin: 0px;
+  background: repeating-radial-gradient(
+                circle at top center,
+                rgb(32, 55, 55) 100px,
+                rgb(24, 26, 27) 200px);
+}
+
+h1 {
+  font-size: 25px;
+  margin: 10px;
+}
+
+pre { margin: 0px; }
+
+.redacted {
+  display: inline;
+  color: black;
+  background-color: black;
+}
+
+.bow {
+  display: inline;
+  color: black;
+  background-color: white;
+}
+
+.wob {
+  display: inline;
+  color: white;
+  background-color: black;
+}
+
+.card {
+  background-color: white;
+  border: 2px solid black;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'title title title title title title'
+    'intro intro intro art art art'
+    'quote quote quote quote quote quote'
+    'deck deck deck deck deck deck'
+    'quote2 quote2 quote2 quote2 quote2 quote2'
+    'deck2 deck2 deck2 deck2 deck2 deck2'
+    'donate donate donate donate donate donate';
+  gap: 10px;
+  padding: 10px;
+  max-width: 800px;
+  margin: auto;
+}
+
+.title {
+  color: white;
+  grid-area: title;
+  text-align: center;
+  background-color: black;
+  background-image: url(../images/dark_glitch.gif);
+}
+.intro { 
+  grid-area: intro; 
+  background-image: url(../images/white_glitch.gif);
+}
+.art {
+  grid-area: art;
+  padding: 0px;
+  border: 2px solid black;
+  height: 320px;
+  align-items: center;
+  overflow: hidden;
+  background-color: black;
+}
+.quote {
+  grid-area: quote;
+  text-align: center;
+  background-image: url(../images/brown_glitch.gif);
+}
+.divine {
+  color: black;
+  text-shadow: 
+    0 0 5px #fff, 0 0 5px #fff,  0 0 5px #fff, 
+    0 0 10px #fff, 0 0 10px #fff, 0 0 10px #fff,
+    0 0 10px #fff, 0 0 10px #fff, 0 0 10px #fff, 
+    0 0 20px #fff, 0 0 20px #fff, 0 0 20px #fff;
+}
+
+.quote2 {
+  grid-area: quote2;
+  text-align: center;
+  background-image: url(../images/blue_glitch.gif);
+}
+.deck {
+  gap: 10px;
+  display: grid;
+  grid-area: deck;
+  grid-template-columns: auto auto auto;
+}
+.deck2 {
+  gap: 10px;
+  display: grid;
+  grid-area: deck2;
+  grid-template-columns: auto auto auto;
+}
+.donate { grid-area: donate; }

@@ -1,2 +1,1 @@
-# wiserdivisor.github.io
-Portfolio
+brrbrr
