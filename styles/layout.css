@@ -66,10 +66,12 @@ pre { margin: 0px; }
   background-color: black;
   background-image: url(../images/dark_glitch.gif);
 }
+
 .intro { 
   grid-area: intro; 
   background-image: url(../images/white_glitch.gif);
 }
+
 .art {
   grid-area: art;
   padding: 0px;
