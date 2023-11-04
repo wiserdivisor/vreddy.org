@@ -68,8 +68,9 @@ pre { margin: 0px; }
 }
 
 .intro { 
-  grid-area: intro; 
-  background-image: url(../images/white_glitch.gif);
+  grid-area: intro;
+  background-color: lightgrey;
+  /*background-image: url(../images/white_glitch.gif);*/
 }
 
 .art {
@@ -84,7 +85,7 @@ pre { margin: 0px; }
 .quote {
   grid-area: quote;
   text-align: center;
-  background-image: url(../images/brown_glitch.gif);
+  background-color: black;
 }
 .divine {
   color: black;
@@ -98,7 +99,7 @@ pre { margin: 0px; }
 .quote2 {
   grid-area: quote2;
   text-align: center;
-  background-image: url(../images/blue_glitch.gif);
+  background-color: black;
 }
 .deck {
   gap: 10px;
