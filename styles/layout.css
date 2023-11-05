@@ -64,13 +64,12 @@ pre { margin: 0px; }
   grid-area: title;
   text-align: center;
   background-color: black;
-  background-image: url(../images/dark_glitch.gif);
+  background-image: url(../images/dark_glitch.webp);
 }
 
 .intro { 
   grid-area: intro;
   background-color: lightgrey;
-  /*background-image: url(../images/white_glitch.gif);*/
 }
 
 .art {
