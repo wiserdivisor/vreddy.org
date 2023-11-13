@@ -2,6 +2,7 @@
 <html>
   <head>
     <!--link rel="stylesheet" href="./styles/reset.css"-->
+    <title>How it feels to chew 5 gum...</title>
     <link rel='stylesheet' type='text/css' href='http://www.x3dom.org/download/x3dom.css'></link> 
     <script type='text/javascript' src='http://www.x3dom.org/download/x3dom.js'></script>
     <link rel="stylesheet" href="./styles/layout.css" />
@@ -17,32 +18,85 @@
       </div>
 
       <div class="intro card">
+
         <pre>
-Hello <p class="redacted">friend</p>. My name is <p class="redacted">Vignesh Reddy</p>.
-I like solving problems.
-Got a <p class="redacted">cool community</p> or a <p class="redacted">crazy idea</p>? Count me in!
-Always open to new opportunities...
-and <p class="redacted">making friends :)</p>
-Professionally, I work with <p class="redacted">Python, Typescript, Java and C++.</p>
+#include &lt;iostream&gt;
+#include &lt;array&gt;
+#include &lt;unordered_map&gt;
 
-For <p class="redacted">fun</p>, I make and play <p class="redacted">videogames</p> and cool apps!
-I tinker with <p class="redacted">electronics</p>, 'cause I <p class="redacted">&#10084; bare metal</p> projects.
-I read <p class="redacted">writings</p> of <p class="redacted">Nietzsche</p>, <p class="redacted">Jung</p> and <p class="redacted">Mr. Aurelius</p> (picrel).
+template &lt;std::size_t N&gt;
+void print_array(const std::array&lt;const char*, N&gt;& arr){
+    for(int i=0; i&lt;2; i++){
+        std::cout &lt;&lt; arr[i] &lt;&lt; ", ";
+    }
+    std::cout &lt;&lt; arr[2] &lt;&lt; " and " &lt;&lt; arr[3] &lt;&lt; ".";
+}
 
-Tech Stack:
-<p class="redacted">Hugo (Go)</p>, Angular (TS), React (JS), <p class="redacted">Qt (C/C++)</p>
-Express (JS), <p class="redacted">Flask + Django (Python)</p>
-<p class="redacted">PostgreSQL</p>, SQLite, Elasticsearch
-Docker compose, <p class="redacted">Bash, Powershell</p>
-<p class="redacted">Windows 7/10/11</p>, Ubuntu, Debian, <p class="redacted">Raspbian</p>
+int main() {
+    
+    // Hello Friend :)
+    char* what_you_got[2] = {   "a Cool Community", "some CrAzY Ideas" };
+    char* what_I_like[6] = {    "new opportunities", "making friends", "videogames",
+                                "cool apps", "electronics", "bare metal projects" };
+    
+    std::unordered_map&lt;const char*, std::array&lt;const char*, 4&gt;&gt; what_I_do_for;
+    what_I_do_for["work"] = { "Python", "Typescript", "C++", "Java" };
+    what_I_do_for["fun"] = { "videogames", "cool apps", "electronics", "bare metal projects" };
+    what_I_do_for["reading"] = { "Mr. Dostoyevsky", "Mr. Nietzsche", "Mr. Jung", "Mr. Aurelius" };
+    what_I_do_for["frontend"] = { "React", "Angular", "Qt", "Hugo" };
+    what_I_do_for["backend"] = { "Express", "Spring", "Django", "Gin" };
+    what_I_do_for["database"] = { "PostgreSQL", "Elasticsearch", "SQLite", "Redis" };
+    what_I_do_for["automation"] = { "Python", "Bash", "Powershell", "Docker compose" };
+   
+    // My name is Vignesh Reddy. I like solving problems!
+    // Got a Cool Community? Got some CrAzY Ideas?  Count me in!!!
+    // Always open to new opportunities and making friends :)
+ 
+    std::cout &lt;&lt; "My name is Vignesh Reddy. I like solving problems!" &lt;&lt; std::endl;
+    for(char* x: what_you_got){
+        std::cout &lt;&lt; "Got " &lt;&lt; x &lt;&lt; "? ";
+    }
+    if(true){
+        std::cout &lt;&lt; " Count me in!!!";
+    }
+    std::cout &lt;&lt; "\nAlways open to " &lt;&lt; what_I_like[0] &lt;&lt; " and " &lt;&lt; what_I_like[1] &lt;&lt; " :)";
 
-Curious about the <p class="redacted">redactions</p>?
-<i>Elevate</i> yourself, to see <p class="redacted">(them)</p> in a different <i>light</i>.
+    // Professionally, I work with Python, Typescript, C++ and Java.
+    // For fun, I play videogames and make cool apps!
+    // I tinker with electronics as I &10084; bare metal projects.
+    // I read writings of Mr. Dostoyevsky, Mr. Nietzsche, Mr. Jung and Mr. Aurelius. (picrel)
+ 
+    std::cout &lt;&lt; "\n\nProfessionally, I work with "; print_array(what_I_do_for["work"]);
+    std::cout &lt;&lt; "\nFor fun, I play " &lt;&lt; what_I_do_for["fun"][0] 
+              &lt;&lt; " and make " &lt;&lt; what_I_do_for["fun"][1] &lt;&lt; "!";
+    std::cout &lt;&lt; "\nI tinker with " &lt;&lt; what_I_do_for["fun"][2] 
+              &lt;&lt; " as I &10084; " &lt;&lt; what_I_do_for["fun"][3] &lt;&lt; ".";
+    std::cout &lt;&lt; "\nI read writings of "; print_array(what_I_do_for["reading"]);
+    std::cout &lt;&lt; " (picrel)";
+
+    // Tech Stack:
+    // Frontend: React, Angular, Qt and Hugo.
+    // Backend: Express, Spring, Django and Gin.
+    // Database: PostgreSQL, Elasticsearch, SQLite and Redis.
+    // Automation: Python, Bash, Powershell and Docker compose.
+    // Equally at home with both Windows and Linux.
+
+    std::cout &lt;&lt; "\n\nTech Stack:";
+    std::cout &lt;&lt; "\nFrontend: "; print_array(what_I_do_for["frontend"]);
+    std::cout &lt;&lt; "\nBackend: "; print_array(what_I_do_for["backend"]);
+    std::cout &lt;&lt; "\nDatabase: "; print_array(what_I_do_for["database"]);
+    std::cout &lt;&lt; "\nAutomation: "; print_array(what_I_do_for["automation"]);
+    std::cout &lt;&lt; "\nEqually at home with both Windows and Linux.";
+ 
+    return 0;
+}
+
 </pre>
+
       </div>
 
       <div class="art card">
-        <img src="./images/marcus7.webp" alt="Marcus">
+        <img src="./images/marcus_gray.webp" alt="Marcus">
       </div>
       
       <div class="divine quote card">
