@@ -5,15 +5,7 @@ html, body {
 body {
   margin: 0px;
   background-color: black;
-
 }
-
-h1 {
-  font-size: 36px;
-  margin: 10px;
-}
-
-pre { margin: 0px; }
 
 .redacted {
   display: inline;
@@ -44,6 +36,7 @@ pre { margin: 0px; }
 
 .grid-container {
   display: grid;
+/*
   grid-template-areas:
     'title title title title title title'
     'art art art intro intro intro'
@@ -52,6 +45,7 @@ pre { margin: 0px; }
     'quote2 quote2 quote2 quote2 quote2 quote2'
     'deck2 deck2 deck2 deck2 deck2 deck2'
     'donate donate donate donate donate donate';
+*/
   gap: 10px;
   padding: 0px;
   width: auto;
@@ -61,23 +55,51 @@ pre { margin: 0px; }
 .title {
   color: white;
   height: 20vh;
-  grid-area: title;
+/*grid-area: title;*/
   text-align: center;
   justify-content: center;
   background-color: black;
 }
 
 .intro { 
-  grid-area: intro;
-  max-height: 300px;
+/*grid-area: intro;*/
+  max-height: 200px;
   overflow-y: scroll;
   border-radius: 10px 0px 0px 10px;
-  background-color: lightgrey;
+  color: white;
+  background-color: black;
+} 
+
+@media (min-width: 1000px) {
+  .intro {
+    margin: auto;
+    max-width: 1000px;
+  }
+  div.title > h1 {
+    font-size: 36px;
+    margin: 10px;
+  }
+  .deck {
+    margin: auto;
+    max-width: 900px;
+  }
+}
+
+@media (max-width: 1000px) {
+  div.title > h1 {
+    font-size: 64px;
+    margin: 10px;
+  }
+}
+
+div.intro > pre {
+  margin: 0px;
+  max-height: inherit;
 }
 
 .art {
-  grid-area: art;
-  height: 320px;
+/*grid-area: art;*/
+  /*height: 320px;*/
   overflow: hidden;
   align-items: center;
   border: 2px solid black;
@@ -86,13 +108,14 @@ pre { margin: 0px; }
 }
 
 .quote {
-  grid-area: quote;
+/*grid-area: quote;*/
   text-align: center;
   background-color: black;
 }
 
 .divine {
   color: black;
+  font-size: 21px;
   text-shadow: 
     0 0 5px #fff, 0 0 5px #fff,  0 0 5px #fff, 
     0 0 10px #fff, 0 0 10px #fff, 0 0 10px #fff,
@@ -101,20 +124,27 @@ pre { margin: 0px; }
 }
 
 .quote2 {
-  grid-area: quote2;
+/*grid-area: quote2;*/
   text-align: center;
   background-color: black;
 }
 .deck {
   gap: 10px;
   display: grid;
-  grid-area: deck;
+/*grid-area: deck;*/
   grid-template-columns: auto auto auto;
 }
+
+div[class^="p"] {
+  color: white;
+  background-color: black;
+  border: 2px solid grey;
+}
+
 .deck2 {
   gap: 10px;
   display: grid;
-  grid-area: deck2;
+/*grid-area: deck2;*/
   grid-template-columns: auto auto auto;
 }
-.donate { grid-area: donate; }
+/*grid-area: donate; }*/
