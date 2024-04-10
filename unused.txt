@@ -1,0 +1,83 @@
+      <div class="art-intro">
+
+        <div class="intro card">
+<pre>
+///// Introduction Ver.1.0.0 [2023-11-16T22:33:22+05:30] | C++ /////
+#include &lt;iostream&gt;
+#include &lt;array&gt;
+#include &lt;unordered_map&gt;
+
+template &lt;std::size_t N&gt;
+void print_array(const std::array&lt;const char*, N&gt;& arr){
+    for(int i=0; i&lt;2; i++){
+        std::cout &lt;&lt; arr[i] &lt;&lt; ", ";
+    }
+    std::cout &lt;&lt; arr[2] &lt;&lt; " and " &lt;&lt; arr[3] &lt;&lt; ".";
+}
+
+int main() {
+    
+    // Hello Friend :)
+    char* what_you_got[2] = {   "a Cool Community", "some CrAzY Ideas" };
+    char* what_I_like[6] = {    "new opportunities", "making friends", "videogames",
+                                "cool apps", "electronics", "bare metal projects" };
+    
+    std::unordered_map&lt;const char*, std::array&lt;const char*, 4&gt;&gt; what_I_do_for;
+    what_I_do_for["work"] = { "Python", "Typescript", "C++", "Java" };
+    what_I_do_for["fun"] = { "videogames", "cool apps", "electronics", "bare metal projects" };
+    what_I_do_for["reading"] = { "Mr. Dostoyevsky", "Mr. Nietzsche", "Mr. Jung", "Mr. Aurelius" };
+    what_I_do_for["frontend"] = { "React", "Angular", "Qt", "Hugo" };
+    what_I_do_for["backend"] = { "Express", "Spring", "Django", "Gin" };
+    what_I_do_for["database"] = { "PostgreSQL", "Elasticsearch", "SQLite", "Redis" };
+    what_I_do_for["automation"] = { "Python", "Bash", "Powershell", "Docker compose" };
+   
+    // My name is Vignesh Reddy. I like solving problems!
+    // Got a Cool Community? Got some CrAzY Ideas?  Count me in!!!
+    // Always open to new opportunities and making friends :)
+ 
+    std::cout &lt;&lt; "My name is Vignesh Reddy. I like solving problems!" &lt;&lt; std::endl;
+    for(char* x: what_you_got){
+        std::cout &lt;&lt; "Got " &lt;&lt; x &lt;&lt; "? ";
+    }
+    if(true){
+        std::cout &lt;&lt; " Count me in!!!";
+    }
+    std::cout &lt;&lt; "\nAlways open to " &lt;&lt; what_I_like[0] &lt;&lt; " and " &lt;&lt; what_I_like[1] &lt;&lt; " :)";
+
+    // Professionally, I work with Python, Typescript, C++ and Java.
+    // For fun, I play videogames and make cool apps!
+    // I tinker with electronics as I &10084; bare metal projects.
+    // I read writings of Mr. Dostoyevsky, Mr. Nietzsche, Mr. Jung and Mr. Aurelius.
+ 
+    std::cout &lt;&lt; "\n\nProfessionally, I work with "; print_array(what_I_do_for["work"]);
+    std::cout &lt;&lt; "\nFor fun, I play " &lt;&lt; what_I_do_for["fun"][0] 
+              &lt;&lt; " and make " &lt;&lt; what_I_do_for["fun"][1] &lt;&lt; "!";
+    std::cout &lt;&lt; "\nI tinker with " &lt;&lt; what_I_do_for["fun"][2] 
+              &lt;&lt; " as I &10084; " &lt;&lt; what_I_do_for["fun"][3] &lt;&lt; ".";
+    std::cout &lt;&lt; "\nI read writings of "; print_array(what_I_do_for["reading"]);
+
+    // Tech Stack:
+    // Frontend: React, Angular, Qt and Hugo.
+    // Backend: Express, Spring, Django and Gin.
+    // Database: PostgreSQL, Elasticsearch, SQLite and Redis.
+    // Automation: Python, Bash, Powershell and Docker compose.
+    // Equally at home with both Windows and Linux.
+
+    std::cout &lt;&lt; "\n\nTech Stack:";
+    std::cout &lt;&lt; "\nFrontend: "; print_array(what_I_do_for["frontend"]);
+    std::cout &lt;&lt; "\nBackend: "; print_array(what_I_do_for["backend"]);
+    std::cout &lt;&lt; "\nDatabase: "; print_array(what_I_do_for["database"]);
+    std::cout &lt;&lt; "\nAutomation: "; print_array(what_I_do_for["automation"]);
+    std::cout &lt;&lt; "\nEqually at home with both Windows and Linux.";
+ 
+    return 0;
+}
+</pre>
+        </div>
+
+        <div class="art card">
+          <img src="./images/marcus_loop.webp" alt="Marcus">
+        </div>
+        
+      </div>
+

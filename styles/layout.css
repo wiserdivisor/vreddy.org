@@ -7,6 +7,10 @@ body {
   background-color: black;
 }
 
+/* TEXT START */
+h1 {
+  display: inline;
+}
 .redacted {
   display: inline;
   color: black;
@@ -25,6 +29,31 @@ body {
   background-color: black;
 }
 
+.divine {
+  color: black;
+  background-color: black;
+  text-shadow: 
+    0 0 5px #fff, 0 0 5px #fff,  0 0 5px #fff, 
+    0 0 5px #fff, 0 0 5px #fff,  0 0 5px #fff, 
+    0 0 10px #fff, 0 0 10px #fff, 0 0 10px #fff,
+    0 0 10px #fff, 0 0 10px #fff, 0 0 10px #fff, 
+    0 0 20px #fff, 0 0 20px #fff, 0 0 20px #fff;
+}
+
+/* TEXT END */
+
+/* CONTAINERS START */
+.main-container {
+  padding: 0px;
+  width: auto;
+  margin: auto;
+}
+.art-intro {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
 .card {
   background-color: lightgrey;
   border-radius: 10px;
@@ -33,35 +62,35 @@ body {
   flex-direction: column;
 }
 
-.grid-container {
-  display: grid;
-/*
-  grid-template-areas:
-    'title title title title title title'
-    'art art art intro intro intro'
-    'quote quote quote quote quote quote'
-    'deck deck deck deck deck deck'
-    'quote2 quote2 quote2 quote2 quote2 quote2'
-    'deck2 deck2 deck2 deck2 deck2 deck2'
-    'donate donate donate donate donate donate';
-*/
+.visible-on-dark-theme {
+  color: black;
+  background-color: black;
+  border: 0px;
+  text-align: center;
+}
+
+.deck {
   gap: 10px;
-  padding: 0px;
-  width: auto;
-  margin: auto;
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+
+.deck .card {
+  color: white;
+  background-color: black;
+  border: 2px solid grey;
+
 }
 
 .title {
   color: white;
   height: 20vh;
-/*grid-area: title;*/
   text-align: center;
   justify-content: center;
   background-color: black;
 }
 
 .intro { 
-/*grid-area: intro;*/
   max-height: 200px;
   overflow-y: scroll;
   border-radius: 10px 0px 0px 10px;
@@ -69,9 +98,40 @@ body {
   background-color: black;
 } 
 
-@media (min-width: 1000px) {
+
+div.intro > pre {
+  margin: 0px;
+  max-height: inherit;
+}
+
+.art {
+  overflow: hidden;
+  align-items: center;
+  background-color: black;
+}
+/* CONTAINERS END */
+
+
+
+/* Mobile */
+@media screen and (min-width: 767px) {
+
+}
+
+/* Tablet */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+
+}
+
+/* Desktop */
+@media screen and (min-width: 1024px) {
+
+}
+
+@media (min-width: 700px) {
   .intro {
-    margin: auto;
+    margin-top: auto;
+    margin-bottom: auto;
     max-width: 1000px;
   }
   div.title > h1 {
@@ -84,65 +144,10 @@ body {
   }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 70px) {
   div.title > h1 {
     font-size: 64px;
     margin: 10px;
   }
 }
 
-div.intro > pre {
-  margin: 0px;
-  max-height: inherit;
-}
-
-.art {
-/*grid-area: art;*/
-  /*height: 320px;*/
-  overflow: hidden;
-  align-items: center;
-  background-color: black;
-  /* background: repeating-radial-gradient(circle at top center, rgb(32, 55, 55) 100px, rgb(24, 26, 27) 200px); */
-}
-
-.quote {
-/*grid-area: quote;*/
-  text-align: center;
-  background-color: black;
-}
-
-.divine {
-  color: black;
-  font-size: 21px;
-  text-shadow: 
-    0 0 5px #fff, 0 0 5px #fff,  0 0 5px #fff, 
-    0 0 10px #fff, 0 0 10px #fff, 0 0 10px #fff,
-    0 0 10px #fff, 0 0 10px #fff, 0 0 10px #fff, 
-    0 0 20px #fff, 0 0 20px #fff, 0 0 20px #fff;
-}
-
-.quote2 {
-/*grid-area: quote2;*/
-  text-align: center;
-  background-color: black;
-}
-.deck {
-  gap: 10px;
-  display: grid;
-/*grid-area: deck;*/
-  grid-template-columns: auto auto auto;
-}
-
-div[class^="p"] {
-  color: white;
-  background-color: black;
-  border: 2px solid grey;
-}
-
-.deck2 {
-  gap: 10px;
-  display: grid;
-/*grid-area: deck2;*/
-  grid-template-columns: auto auto auto;
-}
-/*grid-area: donate; }*/
