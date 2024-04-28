@@ -1,0 +1,13 @@
+.canvas {
+  width: 90%;
+  height: 360px;
+  margin: 10px 0px 20px 0px;
+}
+
+.graphbox {
+  width: 100%;
+  margin: auto;
+  height: 100%;
+  border: 2px solid orange;
+  border-radius: 10px;
+}
