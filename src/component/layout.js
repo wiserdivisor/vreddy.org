@@ -6,12 +6,14 @@ function Layout({ children }) {
   return(
     <div className="layout">
       <div className="header">
-        <div className="divine">V I G N E S H</div>
-        <div className="divine">R E D D Y</div>
+        <a href="/">
+          <div className="divine">V I G N E S H</div>
+          <div className="divine">R E D D Y</div>
+        </a>
         <sub>Discipline is dignity. Hesitation is defeat.</sub>
       </div>
       <div className="menubar">
-        <a href="#" target="blank">Read</a>
+        <a href="/blog">Read</a>
         <a href="#" target="blank">Watch</a>
         <a href="#" target="blank">Play</a>
         <a href="#" target="blank">Shop</a>

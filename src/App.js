@@ -3,6 +3,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Layout from "./component/layout.js";
 import Home from "./component/home.js";
+import BlogCatalog from "./component/blog_catalog.js";
+import BlogPost from "./component/blog_post.js";
 
 function App() {
   return (
@@ -10,8 +12,9 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
+          <Route path="blog" element={<BlogCatalog />} />
+          <Route path="blog/:name" element={<BlogPost />} />
           {/*
-          <Route path="blogs" element={<Blogs />} />
           <Route path="contact" element={<Contact />} />
           <Route path="*" element={<NoPage />} />
           */}
