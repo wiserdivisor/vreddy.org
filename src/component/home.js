@@ -7,6 +7,7 @@ import database from "../images/database.png";
 
 import "./home.css"
 
+import GraphBox from "./graphbox.js";
 import SkillCard from "./skillcard.js";
 
 function Home({ children }) {
@@ -54,6 +55,8 @@ function Home({ children }) {
           I use frames like: Qt || React || Node.
         </div>
       </div>
+
+      <GraphBox />
 
     </div>
   );
