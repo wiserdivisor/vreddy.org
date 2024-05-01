@@ -1,5 +1,5 @@
 import "./graphbox.css";
-import ShaiHulud from "../shaihulud.png";
+import ShaiHulud from "../images/shaihulud.png";
 
 function GraphBox({children}) {
   return(

@@ -12,6 +12,7 @@
 
 .body {
   width: 100%;
+  padding: 100px 0px;
   margin: 0px 0px 20px 0px;
   display: flex;
   flex-direction: column;
@@ -21,7 +22,7 @@
 
 .intro-container {
   width: 100%;
-  margin: 50px 0px 100px 0px;
+  margin: 0px 0px 100px 0px;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -53,7 +54,7 @@
   color: black;
   font-size: 20px;
   font-weight: bold;
-  margin: 0px 0px 0px 7px;
+  margin: 7px;
   text-shadow: 
     0 0 5px #fff, 0 0 5px #fff,  0 0 5px #fff, 
     0 0 5px #fff, 0 0 5px #fff,  0 0 5px #fff, 
@@ -61,19 +62,15 @@
     0 0 20px #fff, 0 0 20px #fff, 0 0 20px #fff;
 }
 
-.question {
+.inyourface {
   font-size: 84px;
   font-weight: bold;
-}
-
-.brag-container {
-  width: 100%;
-  flex-direction: column;
+  margin: 0px 0px 100px 0px;
 }
 
 .eclipse-container {
   width: 100%;
-  margin: 100px 0px 100px 0px;
+  margin: 0px 0px 100px 0px;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -110,39 +107,16 @@
     0 0 30px black, 0 0 30px black, 0 0 30px black;
 }
 
+.brag-container {
+  width: 100%;
+  margin: 0px 0px 250px 0px;
+  flex-direction: column;
+}
+
 .row {
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-}
-
-@keyframes portrait-shadow-out {
-  0% { box-shadow: 0px 0px 15px white; }
-  100% { box-shadow: 0px 0px 0px white; }
-}
-
-@keyframes portrait-shadow-in {
-  0% { box-shadow: 0px 0px 0px white; }
-  100% { box-shadow: 0px 0px 15px white; }
-}
-
-.portrait-card {
-  height: 300px;
-  width: 22%;
-  font-size: 72px;
-  font-weight: bold;
-  white-space: normal;
-  border-radius: 10px;
-  border: 1px solid grey;
-  background-color: transparent;
-  animation-name: portrait-shadow-out;
-  animation-duration: 0.5s;
-  animation-fill-mode: forwards;
-}
-
-.portrait-card:hover {
-  animation-name: portrait-shadow-in;
-  animation-duration: 0.5s;
-  animation-fill-mode: forwards;
+  margin: 0px;
 }

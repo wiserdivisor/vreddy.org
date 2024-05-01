@@ -1,0 +1,43 @@
+@keyframes skillcard-shadow-out {
+  0% { box-shadow: 0px 0px 20px violet; }
+  100% { box-shadow: 0px 0px 0px violet; }
+}
+
+@keyframes skillcard-shadow-in {
+  0% { box-shadow: 0px 0px 0px violet; }
+  100% { box-shadow: 0px 0px 20px violet; }
+}
+
+.skillimg {
+  width: 350px;
+  border: 5px solid #213a5c;
+  border-radius: 10px;
+}
+
+.skillcard {
+  width: 40%;
+  height: 444px;
+  padding: 20px;
+  color: #dbdbdb;
+  border-radius: 10px;
+  background-image: url("../images/nebula.png");/*#1f2022;*/
+  animation-name: skillcard-shadow-out;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+.skillcard:hover {
+  animation-name: skillcard-shadow-in;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+.skillcard > p {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 10px 0px 5px 0px;
+}
+
+.skillcard > hr {
+  width: 200px;
+}
