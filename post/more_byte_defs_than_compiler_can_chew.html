@@ -1,0 +1,116 @@
+<div class="post">
+  <div class="head">
+    <img class="thumbnail" src="/image/more_byte_def.png" />
+    <div class="headline">
+      <p class="timestamp">2nd of May, 2024 | Vignesh Reddy</p>
+      <h1 class="content">More byte definitions than my compiler could chew.</h1>
+      <sub>How I Learned to Stop Worrying and Hate the MSVC Compiler.</sub>
+    </div>
+  </div>
+  <hr/>
+  <div class="post-content">
+    <h1>A</h1>
+    bout a month ago I began working on a porting project, a rather tedious task of
+    making changes to a codebase for moving from one OS/framework/language/compiler to another.
+    However, this was not my first rodeo. I had ported applications before. Going back a few months, 
+    the boys wanted to run a Windows application on Docker. "So what's the issue with Windows
+    docker?" you might think, "Why not just run the app on a Windows base image?". 
+    Don't flatter yourself big-brain,
+    we all thought of that. The problem is that the Windows base image is proprietary and asks
+    us to open our wallets, whose gonna do that amirite?<br/>This means that I had to port the app 
+    from Windows to Linux. I had never seen this codebase before and I had never done "porting" 
+    before. Basically I had no idea what I was getting into, and like a lamb to the slaughter 
+    I just went ahead with it. (Spoiler: I'm gonna regret that.)
+    <br/>
+    <br/>
+    What ensued from there was a month-long endeavor of exploration, change-documentation and 
+    fighting with the C compiler to replace all of the Windows dependencies with it's Linux 
+    counterparts and where there was no alternative, I was expected to write it myself (yikes).
+    HOLY HELL that felt like forever. And when it was done, I threw a pizza party for my lunch 
+    buddies and took a couple of days off (you have no idea how badly I needed that). When I 
+    returned to office, I was relaxed. Knowing that the worst is over, I slid back into my chair 
+    and attended what my lunch buddies like to call "The Daily Scum Meeting" (AKA The Daily Scrum). 
+    Little did I know that I was about to be assigned yet another porting task, and then another, 
+    and another. I officially came to be known as the porting guy around the block and I actually 
+    got used to it... or so I thought.
+    <br/>
+    <br/>
+    For my latest session of porting agony, I was given a codebase that was no less than a 
+    <b>FEW HUNDRED THOUSAND LINES LONG.</b> This app was written using the Qt framework and my 
+    task was to port it from Qt5 to Qt6, 
+    this meant compiling the app over and over again, running into missing symbols and looking for 
+    that symbol in the "Qt5 Obsolete Classes and Members" page on the official Qt website (thanks
+    Qt). After replacing the symbol, I'd be documenting the change that I made for ease of debugging.
+    <b>But wait, there's more!</b> The little "quirk" here was that Qt6 does not work with C++11 
+    - the version that this codebase was currently written in. So, this burning and screeching hell 
+    of a codebase also had to be moved from C++11 to C++17 and if that wasn't enough to make me 
+    suicidal, the compiler that they were using was MSVC 2015, one that DOES HECKING NOT fully 
+    support compilation of C++17 code, so I had to use the MSVC 2019 compiler.
+    In summary, I was taking this codebase:
+    <ul>
+      <li>From Qt5 to Qt6.</li>
+      <li>From C++11 to C++17.</li>
+      <li>From MSVC 2015 to MSVC 2019.</li>
+    </ul>
+    When I finally understood the scope, I screamed (internally) and wanted to jump out the nearest 
+    window, it made me understand the importance of having suicide nets around the office buildings 
+    like they do in China. But did I complain? No, I'm not a quitter. I locked-in and got to work.
+    <br/>
+    <br/>
+    I configured each project in the codebase to use C++17 and the errors came in like a tsunami. 
+    Thousands of errors at a time, so many bugs that you'd need to use a blowtorch to kill them all. 
+    The Qt-related changes were the easy part, in fact, every time I compiled I was hoping for there 
+    to only be Qt errors because I knew exactly how to mitigate them. A slightly harder issue to tackle 
+    was the missing base classes from the Standard Library (STL). I learned the hard way that different 
+    C++ versions also meant different Standard Libraries. This codebase used certain base classes 
+    from STL of C++11 that were straight-up removed in the STL of C++17. I decided to write these 
+    templates myself in a project dedicated for common utilities, so that I could just #include 
+    them wherever needed. A lot of the errors were solved with just the donkey-work of explicit 
+    typecasting, these errors were tedious to solve, but the show-stopper was yet to come.
+    <br/>
+    <br/>
+    In the compile output of almost every project, I could see a long series of the same error repeated 
+    hundreds of times. This was the final boss of this task, the Professor Moriarty, the Moby Dick, the 
+    Final Karen who simply refuses to budge. Every time I compile, it spits out a barrage of the same 
+    line over and over again:
+    <br/>
+    ```<br/>
+    ‘byte’: ambiguous symbol<br/>
+    could be ‘unsigned char byte’<br/>
+    or ‘std::byte’<br/>
+    ```
+    <br/>
+    <br/>
+    There was nothing confusing about the error itself, its very clear that the compiler is not able to 
+    decide between two different definitions of the symbol 'byte' for proceeding with the compilation. 
+    "Simple enough" I thought naively, forgetting the fact that it's never as simple as it seems. "I 
+    can solve this with `using namespace std`", I exclaimed. And this wasn't a stupid idea by any 
+    measure. If the compiler can't decide which definition to pick, a namespace is what you use to 
+    narrow it down. But it didn't work! The MSVC compiler kept on bitching about the same issue. So I 
+    tried using `std::byte` wherever it was called. I got fewer errors, but it still persisted. Now the 
+    errors originated from the Qt6 libraries, there they were `using namespace std` and I can't just 
+    waltz in there and rename all symbols to `std::byte`. As reckless as that solution may seem, a 
+    rather frustrated gentleman in 
+    <a href="https://developercommunity.visualstudio.com/t/error-c2872-byte-ambiguous-symbol/93889#T-N592809">this thread</a> 
+    just <b>changed the symbol name straight in the Windows SDK headers</b>, no shits given. What a legend. 
+    <br/>
+    <br/>
+    Unfortunately for me, before I could get to the above-mentioned level of badassery, I was joined by 
+    another programmer who happened be the final piece of the puzzle. The manager to banish all the Karens, 
+    the harpoon of Captain Ahab, the Sherlock who cracked the case. She sent me this Stack Overflow 
+    <a href="https://stackoverflow.com/questions/11040133/what-does-defining-win32-lean-and-mean-exclude-exactly">link</a> 
+    and it gave me exactly what I needed. Such a simple solution:
+    <br/>
+    ```
+    <br/>
+    WIN32_MEAN_AND_LEAN
+    <br/>
+    ```
+    <br/>
+    <br/>
+    This was the blowtorch I needed to end all bugs. And I let it rip. Everywhere. I modified the .pro 
+    file of every project to #define WIN32_LEAN_AND_MEAN, this is a directive to the compiler to use 
+    a minimal set of header files for writing a bare-bones Windows program. This minimal set of headers 
+    does not include a definition of byte and with that, the compilation was a success.
+  </div>
+</div>
