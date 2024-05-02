@@ -1,0 +1,27 @@
+.grid-item {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  text-align: left;
+  align-items: center;
+}
+
+.grid-item > img {
+  width: 200px;
+}
+
+.grid-item > a {
+  margin: 0px;
+  padding: 5px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.grid-item > p {
+  margin: 0px;
+  padding: 5px;
+}
+
+.grid-item > hr {
+  width: 300px;
+}

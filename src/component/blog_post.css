@@ -1,3 +1,39 @@
-.bruh {
-  color: red;
+.post {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 10px 0px 100px 0px;
+  align-items: left;
+  text-align: left;
+}
+
+hr {
+  width: 100%;
+}
+
+.thumbnail {
+  width: 300px;
+}
+
+.head {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.headline {
+  padding: 50px;
+}
+
+.post-content {
+  text-align: justify;
+  font-size:22px;
+}
+
+.post-content > h1 {
+  display:inline;
+}
+
+.post-content > a {
+  color: green;
 }

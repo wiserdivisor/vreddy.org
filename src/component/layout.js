@@ -14,9 +14,9 @@ function Layout({ children }) {
       </div>
       <div className="menubar">
         <a href="/blog">Read</a>
-        <a href="#" target="blank">Watch</a>
-        <a href="#" target="blank">Play</a>
-        <a href="#" target="blank">Shop</a>
+        <a href="#">Watch</a>
+        <a href="#">Play</a>
+        <a href="#">Shop</a>
       </div>
       <Outlet />
     </div>
