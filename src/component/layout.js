@@ -13,7 +13,7 @@ function Layout({ children }) {
         <sub>Discipline is dignity. Hesitation is defeat.</sub>
       </div>
       <div className="menubar">
-        <a href="/catalog">Read</a>
+        <a href="/blog">Read</a>
         <a href="#">Watch</a>
         <a href="#">Play</a>
         <a href="#">Shop</a>
