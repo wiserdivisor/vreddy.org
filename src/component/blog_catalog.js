@@ -28,7 +28,7 @@ function BlogCatalog({children}) {
       {data.map((item,index) => (
           <div className="grid-item" key={index}>
             <img src={`/image/${item.img}`} />
-            <a href={`/blog/${item.link}`}>{item.title}</a>
+            <a href={`/blog/post`}>{item.title}</a>
             <p>{item.desc}</p>
             <hr/>
             <p>{item.author} | {item.published_on}</p>

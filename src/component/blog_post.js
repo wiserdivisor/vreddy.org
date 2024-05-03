@@ -9,7 +9,7 @@ function BlogPost({children}) {
   const [data, setData] = useState({__html:""});
 
   useEffect(() => {
-    fetch(`/post/${name}.html`)
+    fetch(`/post/more_byte_defs_than_compiler_can_chew.html`)
     .then(response => {
       if (!response.ok) {
         throw new Error('Network response was not ok');
