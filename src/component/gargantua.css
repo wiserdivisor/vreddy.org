@@ -1,0 +1,46 @@
+.gargantua-container {
+  width: 90%;
+  height: 500px;
+  border-radius: 10px;
+  border: 2px solid white;
+  margin: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gargantua-inner {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  overflow: visible;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 3px solid white;
+  background-color: #141215;
+  box-shadow: 0px 0px 10px orange, inset 0px 0px 20px #b87333;
+}
+
+.gargantua-outer {
+  width: 222px;
+  height: 222px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: transparent;
+  transform: rotate(-30deg);
+  box-shadow: 
+    inset 0px 0px 10px #d9b99b, inset 0px 0px 10px #d9b99b, inset 0px 0px 10px #d9b99b,
+    0px 20px 10px #987554, 0px 20px 10px #987554, 0px 20px 10px #987554, 
+    0px -20px 10px #d9b99b, 0px -20px 10px #d9b99b, 0px -20px 10px #d9b99b, 
+    0px 0px 80px #d9b99b, 0px 0px 80px #d9b99b, 0px 0px 80px #d9b99b,
+    0px 0px 70px #2e1402, 0px 0px 70px #2e1402, 0px 0px 70px #2e1402,
+    0px 0px 20px #d9b99b, 0px 0px 30px #d9b99b;
+}
+
+.gargantua-ring {
+  width: 500px;
+  border: 1px solid white;
+}

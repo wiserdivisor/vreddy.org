@@ -1,4 +1,5 @@
 [
+
   {
     "img":"more_byte_def.png",
     "title":"More byte definitions than my compiler could chew.",
@@ -6,5 +7,14 @@
     "author":"Vignesh Reddy",
     "link":"more_byte_defs_than_compiler_can_chew.html",
     "published_on":"03-05-2024"
+  },
+  {
+    "img":"a_tale_of_two_ports.png",
+    "title":"A Tale of Two Ports.",
+    "desc":"It doesn't always have to be complicated.",
+    "author":"Vignesh Reddy",
+    "link":"a_tale_of_two_ports.html",
+    "published_on":"10-05-2024"
   }
+
 ]

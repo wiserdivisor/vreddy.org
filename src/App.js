@@ -3,8 +3,13 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Layout from "./component/layout.js";
 import Home from "./component/home.js";
+
 import BlogCatalog from "./component/blog_catalog.js";
+import PlayCatalog from "./component/play_catalog.js";
+
 import BlogPost from "./component/blog_post.js";
+
+import Gargantua from "./component/gargantua.js";
 
 function App() {
   return (
@@ -14,6 +19,8 @@ function App() {
           <Route index element={<Home />} />
           <Route path="/blog" element={<BlogCatalog />} />
           <Route path="/blog/:name" element={<BlogPost />} />
+          <Route path="/play" element={<PlayCatalog />} />
+          <Route path="/play/gargantua" element={<Gargantua />} />
           {/*
           <Route path="contact" element={<Contact />} />
           <Route path="*" element={<NoPage />} />

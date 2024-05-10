@@ -1,10 +1,11 @@
 import "./blog_post.css";
 import React, { useState, useEffect } from 'react';
-import {useParams} from 'react-router-dom';
+import {useParams, useLocation} from 'react-router-dom';
 
-function BlogPost({children}) {
+function BlogPost(props) {
 
   let {name} = useParams();
+  let location = useLocation(); 
 
   const [data, setData] = useState({__html:""});
 
@@ -20,8 +21,12 @@ function BlogPost({children}) {
     .catch(error => console.error('There has been a problem with your fetch operation:', error));
   }, []);
 
+  console.log(location);
+
   return(
-    <div className="body" dangerouslySetInnerHTML={data} />
+    <>
+      <div className="body" dangerouslySetInnerHTML={data} />
+    </>
   );
 
 }

@@ -1,8 +1,8 @@
 import "./blog_catalog.css";
 import React, { useState, useEffect } from 'react';
-import {useParams} from 'react-router-dom';
+import {Link, useParams} from 'react-router-dom';
 
-function BlogCatalog({children}) {
+function BlogCatalog(props) {
 
   let {name} = useParams();
 
@@ -24,14 +24,20 @@ function BlogCatalog({children}) {
     return <div>Wait for a bit.</div>
   }
   return(
-    <div className="body">
+    <div className="grid-container">
       {data.map((item,index) => (
           <div className="grid-item" key={index}>
             <img src={`/image/${item.img}`} />
-            <a href={`/blog/${item.link}`}>{item.title}</a>
-            <p>{item.desc}</p>
-            <hr/>
-            <p>{item.author} | {item.published_on}</p>
+            <div className="grid-item-text">
+              <Link to={{ pathname:`/blog/${item.link}`, state:item }} className="grid-item-title">{item.title}</Link>
+              <hr/>
+              <p>{item.desc}</p>
+              {/*
+              <p>
+                <hr/>
+                {item.author} | {item.published_on}
+              </p>*/}
+            </div>
           </div>
         ))} 
     </div>
