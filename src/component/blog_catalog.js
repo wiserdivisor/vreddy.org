@@ -29,14 +29,14 @@ function BlogCatalog(props) {
           <div className="grid-item" key={index}>
             <img src={`/image/${item.img}`} />
             <div className="grid-item-text">
-              <Link to={{ pathname:`/blog/${item.link}`, state:item }} className="grid-item-title">{item.title}</Link>
+              <div className="grid-item-title">
+                <Link to={{ pathname:`/blog/${item.link}`, state:item }}>{item.title}</Link>
+              </div>
+              <p className="grid-item-desc">{item.desc}</p>
               <hr/>
-              <p>{item.desc}</p>
-              {/*
-              <p>
-                <hr/>
+              <p className="grid-item-cred">
                 {item.author} | {item.published_on}
-              </p>*/}
+              </p>
             </div>
           </div>
         ))} 

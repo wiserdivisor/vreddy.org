@@ -1,6 +1,6 @@
 .grid-container {
   display: grid;
-  gap: 20px;
+  gap: 50px;
   grid-template-columns: auto auto auto;
 }
 
@@ -32,11 +32,21 @@
   margin: 0px;
 }
 
+
 .grid-item-text {
   padding: 10px;
 }
 
 .grid-item-title {
+  height: 70px;
   font-size: 22px;
   font-weight: bold;
+}
+
+.grid-item-desc {
+  text-align: left;
+}
+
+.grid-item-cred {
+  text-align: center;
 }
