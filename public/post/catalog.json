@@ -1,11 +1,11 @@
 [
   {
-    "img":"more_byte_def.png",
-    "title":"More byte definitions than my compiler could chew.",
-    "desc":"How I Learned to Stop Worrying and Hate the MSVC Compiler.",
+    "img":"substitute_color_in_images_like_a_wizard.png",
+    "title":"Substitute Colors in Images, like a Wizard.",
+    "desc":"What can take hours in Photoshop, finished in seconds.",
     "author":"Vignesh Reddy",
-    "link":"more_byte_defs_than_compiler_can_chew.html",
-    "published_on":"03-05-2024"
+    "link":"substitute_color_in_images_like_a_wizard.html",
+    "published_on":"11-05-2024"
   },
   {
     "img":"a_tale_of_two_ports.png",
@@ -14,5 +14,13 @@
     "author":"Vignesh Reddy",
     "link":"a_tale_of_two_ports.html",
     "published_on":"10-05-2024"
+  },
+  {
+    "img":"more_byte_def.png",
+    "title":"More byte definitions than my compiler could chew.",
+    "desc":"How I Learned to Stop Worrying and Hate the MSVC Compiler.",
+    "author":"Vignesh Reddy",
+    "link":"more_byte_defs_than_compiler_can_chew.html",
+    "published_on":"03-05-2024"
   }
 ]

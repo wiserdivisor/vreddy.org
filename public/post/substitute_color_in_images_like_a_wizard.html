@@ -1,0 +1,59 @@
+<div class="post">
+  <div class="head">
+    <img class="thumbnail" src="/image/substitute_color_in_images_like_a_wizard.png" />
+    <div class="headline">
+      <p class="timestamp">11th of May, 2024 | Vignesh Reddy</p>
+      <h1 class="content">Substitute Colors in Images, like a Wizard.</h1>
+      <sub>What can take hours in Photoshop, finished in seconds.</sub>
+    </div>
+  </div>
+  <hr/>
+  <div class="post-content">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    Last year one of my colleagues was given a task for recoloring b/w icons for all 7 colors of the rainbow.
+    The task was not complicated but too monotonous. The only approach he knew was opening up each icon in Gimp, filling the black with a color using the fill tool, 
+    and saving it as a PNG. This would not have been such a big deal but the icons were just too many. It was 60 icons with each of them getting recolored 7 times i.e.,
+    420 iterations of recoloring (holy shit). The guy was about to reach Chinese sweatshop levels of monotony with this task, but I didn't let it happen.
+    I took over the task before he could begin (with his permission) by telling him that I have a method that can finish the job within minutes. Needless to say,
+    he was more than happy to hand it over to me and was more than surprised to find that I have created all the required images in less than 10 minutes. 
+    <br/>
+    How did I do it? Magic. <a href="https://imagemagick.org/index.php" target="_blank">ImageMagick</a> to be more specific.
+    <br/>
+    <br/>
+    In short, ImageMagick is a command-line tool for editing images; but this description does not do justice to it's wide range of capabilities. It is a 
+    literal supertool for editing images from the terminal. As the editing is done programmatically, there is no chance of errors that you'd normally make 
+    when editing an image by hand. 
+    <br/>
+    <br/>
+    Here I've got 10 b/w PNG icons that will be our subjects for the recoloring process. These icons only contain one color: Black, the background is transparent.
+    We want to recolor them with: Violet, Indigo, Blue, Green, Yellow, Orange and Red. That should give us 70 new images, 80 in total.
+    <br/>
+    <div class="in-article-image-container">
+      <img src="/image/bw_icons.png" style="width:100%;" />
+    </div>
+    <br/>
+    To substitute colors in ImageMagick we use the following command... 
+    <br/>
+    this example is for <span style="color:red;">Red</span>.
+    <br/>
+    <br/>
+    ```
+    convert input.png -fill red -colorize 100 output.png
+    ```
+    <br/>
+    <br/>
+    This will preserve the transparent pixels and make everything else blue.
+    With a simple nested loop in Powershell, I get everything done in one fell swoop.
+    <br/>
+    <div class="in-article-image-container">
+      <img src="/image/substitute_color_code.png" style="width:100%;" />
+    </div>
+    <br/>
+   And just like that, within minutes we have our 70 recolored images!
+    <br/>
+    <div class="in-article-image-container">
+      <img src="/image/colored_icons.png" style="width:100%;" />
+    </div>
+    <br/>
+  </div>
+</div>
