@@ -1,5 +1,5 @@
 .post {
-  width: 90%;
+  width: 60%;
   padding: 10px 0px 100px 0px;
 }
 
@@ -28,7 +28,6 @@ hr {
 .head {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
 }
 
 .headline {
@@ -46,3 +45,19 @@ hr {
   display: inline-block;
   color: green;
 }
+
+@media (width < 900px) {
+  .thumbnail {
+    margin: auto;
+  }
+  .post {
+    width: 90%;
+  }
+  .head {
+    flex-direction: column;
+  }
+  .content {
+    font-size: 24px;
+  }
+}
+
