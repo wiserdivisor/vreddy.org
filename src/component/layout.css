@@ -4,6 +4,7 @@ html, body {
 
 body {
   margin: 0px;
+  width: 100%;
   color: #ffffff;
   background-color: black;
 }
@@ -14,7 +15,7 @@ sub {
 
 .layout {
   margin: auto;
-  width: 900px;
+  width: 100%;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -42,6 +43,8 @@ sub {
 
 .header > a {
   display: flex;
+  padding-left: 10px;
+  padding-right: 10px;
   align-items: center;
   flex-direction: column;
 }
@@ -52,9 +55,21 @@ sub {
   width: 100%;
   margin: 0px 0px 50px 0px;
   padding: 20px 0px 20px 0px;
-  display:flex;
   background-color: black;
+  display: flex;
+  justify-content: center;
+}
+
+.menu {
+  display: flex;
+  width: 100%;
+  max-width: 600px;
   justify-content: space-around;
+}
+
+@media (width > 500px) {
+  .menu {
+  }
 }
 
 a:link, a:visited {

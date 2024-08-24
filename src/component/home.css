@@ -19,11 +19,12 @@
   text-align: center;
 }
 
+
 .intro-container {
   width: 100%;
-  margin: 0px 0px 100px 0px;
+  margin: 0px 0px 50px 0px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-around;
 }
 
@@ -42,10 +43,11 @@
 }
 
 .intro {
-  margin: auto;
+  margin-top: 50px;
   text-align: left;
   line-height: 1.8;
-  font-size: 22px;
+  font-size: 16px;
+  text-align: center;
 }
 
 .divine-inline {
@@ -62,9 +64,9 @@
 }
 
 .inyourface {
-  font-size: 84px;
+  font-size: 32px;
   font-weight: bold;
-  margin: 0px 0px 100px 0px;
+  margin: 0px 0px 50px 0px;
 }
 
 .eclipse-container {
@@ -96,7 +98,7 @@
 .undivine-inline {
   display: inline;
   color: white;
-  font-size: 18px;
+  font-size: 14px;
   font-weight: bold;
   margin: 0px 0px 0px 7px;
   text-shadow: 
@@ -107,15 +109,30 @@
 }
 
 .brag-container {
+  display: flex;
   width: 100%;
-  margin: 0px 0px 100px 0px;
+  margin: 50px 0px 50px 0px;
+  align-items: center;
   flex-direction: column;
 }
 
 .row {
-  width: 100%;
+  width: auto;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   margin: 0px;
 }
+
+@media (width > 500px) {
+  .undivine-inline {
+    font-size: 18px;
+  }
+  .inyourface {
+    font-size: 48px;
+  }
+  .row {
+    width: 50%;
+  }
+}
+

@@ -9,18 +9,17 @@
 }
 
 .skillimg {
-  width: 350px;
+  width: 90%;
   border: 5px solid #213a5c;
   border-radius: 10px;
 }
 
 .skillcard {
-  width: 40%;
-  height: 444px;
-  padding: 20px;
+  margin: 20px;
+  padding: 10px;
   color: #dbdbdb;
   border-radius: 10px;
-  background-image: url("../images/nebula.png");/*#1f2022;*/
+  background-image: url("../../public/image/nebula.jpg");
   animation-name: skillcard-shadow-out;
   animation-duration: 0.5s;
   animation-fill-mode: forwards;
@@ -39,5 +38,17 @@
 }
 
 .skillcard > hr {
-  width: 200px;
+  width: 100px;
+}
+
+@media (width < 500px) {
+  .skillcard {
+    width: 40%;
+  }
+}
+
+@media (width > 500px) {  
+  .skillcard {
+    width: 400px;
+  }
 }
