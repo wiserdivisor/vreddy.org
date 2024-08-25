@@ -11,7 +11,7 @@ function Home({ children }) {
 
       <div className="inyourface">
         LOOKING FOR A 
-        <p style={{ color:"red", display: "inline" }}> 10X </p>
+        <p style={{ color:"#ff3333", display: "inline" }}> 10X </p>
         DEV?
       </div>
 

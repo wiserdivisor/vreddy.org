@@ -22,7 +22,7 @@
 }
 
 .grid-item {
-  width: 300px;
+  max-width: 300px;
   height: auto;
   border-radius: 10px;
   display: flex;
