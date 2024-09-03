@@ -48,7 +48,7 @@ function Home({ children }) {
         <div className="intro">
           Hello, I'm <p className="divine-inline">Vignesh</p><br/>
           I enjoy solving problems with software/hardware.<br/>
-          I primarily speak C++17 and Python.<br/>
+          I primarily speak C++11 and Python.<br/>
         </div>
       </div>
 
