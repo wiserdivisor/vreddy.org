@@ -26,19 +26,21 @@ function BlogCatalog(props) {
   return(
     <div className="grid-container">
       {data.map((item,index) => (
-          <div className="grid-item" key={index}>
-            <img src={`/image/${item.img}`} />
-            <div className="grid-item-text">
-              <div className="grid-item-title">
-                <Link to={{ pathname:`/blog/${item.link}`, state:item }}>{item.title}</Link>
+          <Link to={{ pathname:`/blog/${item.link}`, state:item }}>
+            <div className="grid-item" key={index}>
+              <img src={`/image/${item.img}`} />
+              <div className="grid-item-text">
+                <div className="grid-item-title">
+                  <Link to={{ pathname:`/blog/${item.link}`, state:item }}>{item.title}</Link>
+                </div>
+                <p className="grid-item-desc">{item.desc}</p>
+                <hr/>
+                <p className="grid-item-cred">
+                  {item.author} | {item.published_on}
+                </p>
               </div>
-              <p className="grid-item-desc">{item.desc}</p>
-              <hr/>
-              <p className="grid-item-cred">
-                {item.author} | {item.published_on}
-              </p>
             </div>
-          </div>
+          </Link>
         ))} 
     </div>
   );

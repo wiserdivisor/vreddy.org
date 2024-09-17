@@ -1,5 +1,13 @@
 [
   {
+    "img":"one_ruler_to_rule_them_all.jpg",
+    "title":"One Ruler to Rule Them All.",
+    "desc":"A ruler with a reference sheet for dimensions of electronic components.",
+    "author":"Vignesh Reddy",
+    "link":"one_ruler_to_rule_them_all.html",
+    "published_on":"18-09-2024"
+  },
+  {
     "img":"substitute_color_in_images_like_a_wizard.jpg",
     "title":"Substitute Colors in Images, like a Wizard.",
     "desc":"What can take hours in Photoshop, finished in seconds.",

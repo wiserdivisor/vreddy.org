@@ -9,6 +9,8 @@ import PlayCatalog from "./component/play_catalog.js";
 
 import BlogPost from "./component/blog_post.js";
 
+import Contact from "./component/contact.js";
+
 import Gargantua from "./component/gargantua.js";
 import FlappyOrnithopter from "./component/flappy_ornithopter.js";
 
@@ -20,11 +22,11 @@ function App() {
           <Route index element={<Home />} />
           <Route path="/blog" element={<BlogCatalog />} />
           <Route path="/blog/:name" element={<BlogPost />} />
+          <Route path="/contact" element={<Contact />} />
           <Route path="/play" element={<PlayCatalog />} />
           <Route path="/play/gargantua" element={<Gargantua />} />
           <Route path="/play/flappy_ornithopter" element={<FlappyOrnithopter />} />
           {/*
-          <Route path="contact" element={<Contact />} />
           <Route path="*" element={<NoPage />} />
           */}
         </Route>
