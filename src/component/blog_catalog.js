@@ -29,10 +29,8 @@ function BlogCatalog(props) {
           <Link to={{ pathname:`/blog/${item.link}`, state:item }}>
             <div className="grid-item" key={index}>
               <img src={`/image/${item.img}`} />
-              <div className="grid-item-text">
-                <div className="grid-item-title">
-                  <Link to={{ pathname:`/blog/${item.link}`, state:item }}>{item.title}</Link>
-                </div>
+              <div className="grid-item-caption">
+                <div className="grid-item-title">{item.title}</div>
                 <p className="grid-item-desc">{item.desc}</p>
                 <hr/>
                 <p className="grid-item-cred">

@@ -54,57 +54,6 @@ hr {
 	border: 3px solid white;
 }
 
-.battery-pos {
-	width: 50px;
-	height: 0px;
-	top: -40px;
-	left: -57px;
-	position: relative;
-	background-color: black;
-	border-bottom: 3px solid white;
-}
-
-.battery-gap {
-	width: 10px;
-	height: 0px;
-	position: relative;
-	background-color: black;
-	top: -40px;
-	left: -37px;
-	border-bottom: 10px solid black;
-}
-
-.battery-neg {
-	width: 30px;
-	height: 0px;
-	position: relative;
-	background-color: black;
-	top: -40px;
-	left: -47px;
-	border-bottom: 3px solid white;
-}
-
-.switch-stick {
-	width: 100px;
-	height: 0px;
-	position: relative;
-	background-color: black;
-	top: 50px;
-	left: 55px;
-	border-bottom: 3px solid white;
-	transform: rotate(20deg);
-}
-
-.switch-gap {
-	width: 100px;
-	height: 0px;
-	position: relative;
-	background-color: black;
-	top: 36px;
-	left: 60px;
-	border-bottom: 5px solid black;
-}
-
 @media (800px < width) {
   .post-content {
     font-size: 18px;
