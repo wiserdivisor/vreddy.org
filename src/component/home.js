@@ -2,16 +2,24 @@ import React from 'react';
 
 import "./home.css"
 
-import GraphBox from "./graphbox.js";
 import SkillCard from "./skillcard.js";
 
 function Home({ children }) {
   return(
     <div className="body">
 
+      <div className="intro-container">
+        <img style={{ "height":"225px", "width":"200px", "border-radius":"10px", "margin-right":"50px" }} src="/image/face.png" alt="Face" />
+        <div className="intro">
+          Hello, I'm <p className="divine-inline">Vignesh</p><br/>
+          I enjoy solving problems with software/hardware.<br/>
+          I primarily speak C++11 and Python.<br/>
+        </div>
+      </div>
+
       <div className="inyourface">
         LOOKING FOR A 
-        <p style={{ color:"#ff3333", display: "inline" }}> 10X </p>
+        <p style={{ color:"#ffaa00", display: "inline", "text-shadow":"0 0 50px #990000" }}> 10X </p>
         DEV?
       </div>
 
@@ -40,20 +48,8 @@ function Home({ children }) {
           <SkillCard img="/image/database.jpg"  title="Database" sub="Persistent and relaible data." />
         </div>
       </div>
-
-      <div className="inyourface">YOU JUST FOUND <br/>THE ONE</div>
-
-      <div className="intro-container">
-        <img className="surya" src= "/image/suntex.jpg"></img>
-        <div className="intro">
-          Hello, I'm <p className="divine-inline">Vignesh</p><br/>
-          I enjoy solving problems with software/hardware.<br/>
-          I primarily speak C++11 and Python.<br/>
-        </div>
-      </div>
-
-      {/*<GraphBox />*/}
-
+      <img className="surya" src= "/image/suntex.jpg" alt="Sun"></img>
+      <div className="inyourface">YOU JUST FOUND <br/>THE GUY</div>
     </div>
   );
 }
