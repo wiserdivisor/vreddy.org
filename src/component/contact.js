@@ -1,6 +1,8 @@
 import "./contact.css";
 import React from 'react';
 
+
+
 function Contact() {
   return(
     <>
@@ -18,6 +20,15 @@ function Contact() {
             <td>
               <a href="mailto:dyrughei@gmail.com">
                 yrughei@gmail.com
+              </a>
+            </td>
+          </tr>
+
+          <tr>
+            <td>Bluesky</td>
+            <td>
+              <a href="https://bsky.app/profile/kerneldiver.bsky.social" target="_blank">
+                kerneldiver.bsky.social
               </a>
             </td>
           </tr>
