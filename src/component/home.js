@@ -12,8 +12,8 @@ function Home({ children }) {
         <img style={{ "height":"225px", "width":"200px", "border-radius":"10px", "margin-right":"50px" }} src="/image/face.png" alt="Face" />
         <div className="intro">
           Hello, I'm <p className="divine-inline">Vignesh</p><br/>
-          I enjoy solving problems with software/hardware.<br/>
-          I primarily speak C++11 and Python.<br/>
+          I enjoy solving problems.<br/>
+          I primarily speak C++ and Python.<br/>
         </div>
       </div>
 
