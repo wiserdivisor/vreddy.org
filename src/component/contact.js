@@ -6,6 +6,7 @@ import React from 'react';
 function Contact() {
   return(
     <>
+      
       <table>
 
         <thead>
@@ -67,6 +68,17 @@ function Contact() {
 
         </tbody>
       </table>
+
+      <div className="intro-container">
+        <img className="display-picture" src="/image/face.png" alt="Face" />
+        <div className="intro">
+          Hello, I'm 
+          <p className="divine-inline">Vignesh</p><br/>
+          I enjoy solving problems.<br/>
+          I primarily speak C++ and Python.<br/>
+        </div>
+      </div>
+
     </>
   );
 

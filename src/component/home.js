@@ -8,15 +8,6 @@ function Home({ children }) {
   return(
     <div className="body">
 
-      <div className="intro-container">
-        <img style={{ "height":"225px", "width":"200px", "border-radius":"10px", "margin-right":"50px" }} src="/image/face.png" alt="Face" />
-        <div className="intro">
-          Hello, I'm <p className="divine-inline">Vignesh</p><br/>
-          I enjoy solving problems.<br/>
-          I primarily speak C++ and Python.<br/>
-        </div>
-      </div>
-
       <div className="inyourface">
         LOOKING FOR A 
         <p style={{ color:"#ffaa00", display: "inline", "text-shadow":"0 0 50px #990000" }}> 10X </p>

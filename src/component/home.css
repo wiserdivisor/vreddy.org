@@ -20,14 +20,6 @@
 }
 
 
-.intro-container {
-  width: 100%;
-  margin: 0px 0px 50px 0px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-
 @keyframes colchange{
   0% { box-shadow: var(--shadow-init); }
   50% { box-shadow: var(--shadow-final); }
@@ -40,14 +32,6 @@
   height: 200px;
   border-radius: 50%;
   animation: colchange 5s infinite;
-}
-
-.intro {
-  margin-top: 50px;
-  text-align: left;
-  line-height: 1.8;
-  font-size: 16px;
-  text-align: center;
 }
 
 .divine-inline {
