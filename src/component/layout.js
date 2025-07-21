@@ -17,8 +17,10 @@ function Layout({ children }) {
         <a href="/blog">Read</a>
         <a href="https://www.youtube.com/@kerneldiver" target="_blank">Watch</a>
         <a href="/contact">Contact</a>
-        <a href="#">Play</a>
-        <a href="#">Shop</a>
+        {/*
+          <a href="#">Play</a>
+          <a href="#">Shop</a>
+        */}
         </div>
       </div>
       <Outlet />

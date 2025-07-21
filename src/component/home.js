@@ -7,7 +7,8 @@ import SkillCard from "./skillcard.js";
 function Home({ children }) {
   return(
     <div className="body">
-
+      <div className="divine-inline">You see what you want to see.</div>
+      {/*
       <div className="inyourface">
         LOOKING FOR A 
         <p style={{ color:"#ffaa00", display: "inline", "text-shadow":"0 0 50px #990000" }}> 10X </p>
@@ -41,6 +42,7 @@ function Home({ children }) {
       </div>
       <img className="surya" src= "/image/suntex.jpg" alt="Sun"></img>
       <div className="inyourface">YOU JUST FOUND <br/>THE GUY</div>
+      */}
     </div>
   );
 }
